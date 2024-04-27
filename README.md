@@ -1,4 +1,4 @@
-# coding-project-template
+# Express Book Reviews
 
 ## Instructions
 * fork repo
