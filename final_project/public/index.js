@@ -95,7 +95,6 @@ class App extends React.Component {
         constructor(props) {
             super(props);
             this.state = {
-                book:{},
                 books:[]
             };
             this.handleChange = this.handleChange.bind(this);
@@ -104,7 +103,7 @@ class App extends React.Component {
             let searchBy = this.props.searchBy.toLowerCase();
             let value = event.target.value.split(' ').join('%20');
             if(value === "") {
-                this.setState({book:{}});
+                this.setState({books:[]});
                 return;
             }
             let res = await axios.get(`http://localhost:5000/${searchBy}/${value}`);
